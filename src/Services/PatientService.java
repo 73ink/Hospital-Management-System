@@ -39,5 +39,15 @@ public class PatientService {
         }
         return null;
     }
+    public void displayAllPatients() {
+        if (patients.isEmpty()) {
+            System.out.println("No patients available.");
+            return;
+        }
+
+        for (Patient patient : patients) {
+            patient.displayInfo();
+        }
+    }
 
 }
