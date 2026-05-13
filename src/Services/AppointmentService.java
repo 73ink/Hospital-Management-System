@@ -42,4 +42,15 @@ public class AppointmentService {
         return null;
     }
 
+    public void displayAllAppointments() {
+        if (appointments.isEmpty()) {
+            System.out.println("No appointments available.");
+            return;
+        }
+
+        for (Appointment appointment : appointments) {
+            appointment.displayInfo();
+        }
+    }
+
 }
