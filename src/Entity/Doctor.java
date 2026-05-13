@@ -1,4 +1,5 @@
 package Entity;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,4 +12,17 @@ public class Doctor extends Person {
     private double consultationFee;
     private List availableSlots;
     private List assignedPatients;
+
+    public Doctor(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List availableSlots, List assignedPatients) {
+        super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
+        this.doctorId = doctorId;
+        this.specialization = specialization;
+        this.qualification = qualification;
+        this.experienceYears = experienceYears;
+        this.departmentId = departmentId;
+        this.consultationFee = consultationFee;
+        this.availableSlots = availableSlots;
+        this.assignedPatients = assignedPatients;
+    }
+
 }
