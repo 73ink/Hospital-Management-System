@@ -45,5 +45,15 @@ public class NurseService {
         return null;
     }
 
+    public void displayAllNurses() {
+        if (nurses.isEmpty()) {
+            System.out.println("No nurses available.");
+            return;
+        }
+
+        for (Nurse nurse : nurses) {
+            nurse.displayInfo();
+        }
+    }
 
 }
