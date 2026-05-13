@@ -83,6 +83,5 @@ public class Department {
     }
 
     public void setAvailableBeds(int availableBeds) {
-        this.availableBeds = availableBeds;
-    }
+        this.availableBeds = availableBeds;}
 }
