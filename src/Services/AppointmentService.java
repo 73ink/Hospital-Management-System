@@ -32,4 +32,14 @@ public class AppointmentService {
         }
         System.out.println("Appointment not found.");
     }
+
+    public Appointment getAppointmentById(String appointmentId) {
+        for (Appointment appointment : appointments) {
+            if (appointment.getAppointmentId().equals(appointmentId)) {
+                return appointment;
+            }
+        }
+        return null;
+    }
+
 }
