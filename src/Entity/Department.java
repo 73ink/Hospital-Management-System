@@ -83,5 +83,19 @@ public class Department {
     }
 
     public void setAvailableBeds(int availableBeds) {
-        this.availableBeds = availableBeds;}
+        this.availableBeds = availableBeds;
+    }
+
+
+    public void assignDoctor(String doctorId) {
+        doctors.add(doctorId);
+    }
+
+    public void assignNurse(String nurseId) {
+        nurses.add(nurseId);
+    }
+
+    public void updateBedAvailability(int availableBeds) {
+        this.availableBeds = availableBeds;
+    }
 }
