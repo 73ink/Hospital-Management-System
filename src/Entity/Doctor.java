@@ -38,4 +38,16 @@ public class Doctor extends Person {
         System.out.println("Assigned Patients: " + assignedPatients);
         System.out.println("-------------------");
     }
+    public void assignPatient(String patientId) {
+        assignedPatients.add(patientId);
+    }
+
+    public void removePatient(String patientId) {
+        assignedPatients.remove(patientId);
+    }
+
+    public void updateAvailability(String slot) {
+        availableSlots.add(slot);
+    }
+
 }
