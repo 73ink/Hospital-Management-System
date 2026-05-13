@@ -86,4 +86,8 @@ public class NurseService {
         }
     }
 
+    public List<Nurse> getNurses() {
+        return nurses;
+    }
+
 }

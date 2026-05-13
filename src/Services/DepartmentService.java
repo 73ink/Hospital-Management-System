@@ -74,4 +74,8 @@ public class DepartmentService {
             System.out.println("Department not found.");
         }
     }
+
+    public List<Department> getDepartments() {
+        return departments;
+    }
 }

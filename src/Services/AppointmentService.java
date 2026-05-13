@@ -120,4 +120,8 @@ public class AppointmentService {
         }
     }
 
+    public List<Appointment> getAppointments() {
+        return appointments;
+    }
+
 }

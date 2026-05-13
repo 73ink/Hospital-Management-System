@@ -67,5 +67,7 @@ public class PatientService {
     }
 
 
-
+    public static List<Patient> getPatients() {
+        return patients;
+    }
 }
