@@ -68,4 +68,19 @@ public class AppointmentService {
         }
     }
 
+    public void getAppointmentsByDoctor(String doctorId) {
+        boolean found = false;
+
+        for (Appointment appointment : appointments) {
+            if (appointment.getDoctorId().equals(doctorId)) {
+                appointment.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No appointments found for this doctor.");
+        }
+    }
+
 }
