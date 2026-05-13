@@ -11,6 +11,17 @@ public class DoctorService {
         doctors.add(doctor);
         System.out.println("Doctor added successfully.");
     }
+    public void editDoctor(String doctorId, Doctor updatedDoctor){
+        for (int i = 0; i < doctors.size(); i++) {
+            if (doctors.get(i).getDoctorId().equals(doctorId)) {
+                doctors.set(i, updatedDoctor);
+                System.out.println("Doctor updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Doctor not found.");
+    }
+
 
 
     public List<Doctor> getDoctors() {
