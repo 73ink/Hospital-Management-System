@@ -25,5 +25,14 @@ public Person(String id, String firstName, String lastName, LocalDate dateOfBirt
     this.email = email;
     this.address = address;
 }
+public void displayInfo(){
+    System.out.println("ID: " + id);
+    System.out.println("Full Name: " + firstName + " " + lastName);
+    System.out.println("Date of Birth: " + dateOfBirth);
+    System.out.println("Gender: " + gender);
+    System.out.println("Phone Number: " + phoneNumber);
+    System.out.println("Email: " + email);
+    System.out.println("Address: " + address);
+}
 
 }
