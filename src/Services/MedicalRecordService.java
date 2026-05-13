@@ -43,4 +43,15 @@ public class MedicalRecordService {
         }
         return null;
     }
+
+    public void displayAllRecords() {
+        if (records.isEmpty()) {
+            System.out.println("No medical records available.");
+            return;
+        }
+
+        for (MedicalRecord record : records) {
+            record.displayInfo();
+        }
+    }
 }
