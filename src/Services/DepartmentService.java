@@ -10,4 +10,15 @@ public class DepartmentService {
         departments.add(department);
         System.out.println("Department added successfully.");
     }
+
+    public void editDepartment(String departmentId, Department updatedDepartment) {
+        for (int i = 0; i < departments.size(); i++) {
+            if (departments.get(i).getDepartmentId().equals(departmentId)) {
+                departments.set(i, updatedDepartment);
+                System.out.println("Department updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Department not found.");
+    }
 }
