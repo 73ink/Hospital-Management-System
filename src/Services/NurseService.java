@@ -56,4 +56,19 @@ public class NurseService {
         }
     }
 
+    public void getNursesByDepartment(String departmentId) {
+        boolean found = false;
+
+        for (Nurse nurse : nurses) {
+            if (nurse.getDepartmentId().equalsIgnoreCase(departmentId)) {
+                nurse.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No nurses found in this department.");
+        }
+    }
+
 }
