@@ -23,4 +23,15 @@ public class MedicalRecordService {
         }
         System.out.println("Medical record not found.");
     }
+
+    public void removeRecord(String recordId) {
+        for (MedicalRecord record : records) {
+            if (record.getRecordId().equals(recordId)) {
+                records.remove(record);
+                System.out.println("Medical record removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Medical record not found.");
+    }
 }
