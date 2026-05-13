@@ -69,4 +69,19 @@ public class MedicalRecordService {
             System.out.println("No records found for this patient.");
         }
     }
+
+    public void getRecordsByDoctorId(String doctorId) {
+        boolean found = false;
+
+        for (MedicalRecord record : records) {
+            if (record.getDoctorId().equals(doctorId)) {
+                record.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No records found for this doctor.");
+        }
+    }
 }
