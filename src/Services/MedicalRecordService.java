@@ -84,4 +84,15 @@ public class MedicalRecordService {
             System.out.println("No records found for this doctor.");
         }
     }
+
+    public void displayPatientHistory(String patientId) {
+        System.out.println("Medical History for Patient ID: " + patientId);
+        getRecordsByPatientId(patientId);
+    }
+
+    public List<MedicalRecord> getRecords() {
+        return records;
+    }
+
+
 }
