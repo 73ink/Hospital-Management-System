@@ -19,5 +19,16 @@ public class Department {
         this.bedCapacity = bedCapacity;
         this.availableBeds = availableBeds;
     }
+    public void displayInfo() {
+        System.out.println("Department ID: " + departmentId);
+        System.out.println("Department Name: " + departmentName);
+        System.out.println("Head Doctor ID: " + headDoctorId);
+        System.out.println("Doctors: " + doctors);
+        System.out.println("Nurses: " + nurses);
+        System.out.println("Bed Capacity: " + bedCapacity);
+        System.out.println("Available Beds: " + availableBeds);
+        System.out.println("-----------------");
+    }
+
 
 }
