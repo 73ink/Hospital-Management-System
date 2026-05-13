@@ -7,4 +7,8 @@ import java.util.List;
 public class PatientService {
     private static List<Patient> patients = new ArrayList<>();
 
+    public void addPatient(Patient patient) {
+        patients.add(patient);
+        System.out.println("Patient added successfully.");
+    }
 }
