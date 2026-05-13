@@ -50,6 +50,21 @@ public class DoctorService {
         }
     }
 
+    public void getDoctorsBySpecialization(String specialization) {
+        boolean found = false;
+
+        for (Doctor doctor : doctors) {
+            if (doctor.getSpecialization().equalsIgnoreCase(specialization)) {
+                doctor.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No doctors found with this specialization.");
+        }
+    }
+
 
     public List<Doctor> getDoctors() {
         return doctors;
