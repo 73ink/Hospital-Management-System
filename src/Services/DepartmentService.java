@@ -41,4 +41,15 @@ public class DepartmentService {
         }
         return null;
     }
+
+    public void displayAllDepartments() {
+        if (departments.isEmpty()) {
+            System.out.println("No departments available.");
+            return;
+        }
+
+        for (Department department : departments) {
+            department.displayInfo();
+        }
+    }
 }
