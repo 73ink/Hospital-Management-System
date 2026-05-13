@@ -63,4 +63,15 @@ public class DepartmentService {
             System.out.println("Department not found.");
         }
     }
+
+    public void assignNurseToDepartment(String nurseId, String departmentId) {
+        Department department = getDepartmentById(departmentId);
+
+        if (department != null) {
+            department.assignNurse(nurseId);
+            System.out.println("Nurse assigned to department successfully.");
+        } else {
+            System.out.println("Department not found.");
+        }
+    }
 }
