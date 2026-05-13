@@ -109,4 +109,15 @@ public class AppointmentService {
         }
     }
 
+    public void cancelAppointment(String appointmentId) {
+        Appointment appointment = getAppointmentById(appointmentId);
+
+        if (appointment != null) {
+            appointment.cancel();
+            System.out.println("Appointment cancelled successfully.");
+        } else {
+            System.out.println("Appointment not found.");
+        }
+    }
+
 }
