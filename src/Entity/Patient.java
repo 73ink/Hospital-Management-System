@@ -38,4 +38,16 @@ public class Patient extends Person {
         System.out.println("Insurance ID: " + insuranceId);
         System.out.println("-----------------");
     }
+
+    public void addMedicalRecord(MedicalRecord record){
+        medicalRecords.add(record);
+    }
+    public void addAppointment(Appointment appointment){
+        appointments.add(appointment);
+    }
+    public void updateInsurance(String newInsuranceId){
+        this.insuranceId = newInsuranceId;
+    }
+
+
 }
