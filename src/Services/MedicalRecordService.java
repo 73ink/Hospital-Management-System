@@ -34,4 +34,13 @@ public class MedicalRecordService {
         }
         System.out.println("Medical record not found.");
     }
+
+    public MedicalRecord getRecordById(String recordId) {
+        for (MedicalRecord record : records) {
+            if (record.getRecordId().equals(recordId)) {
+                return record;
+            }
+        }
+        return null;
+    }
 }
