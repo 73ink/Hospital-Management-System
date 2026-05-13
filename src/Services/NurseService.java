@@ -71,4 +71,19 @@ public class NurseService {
         }
     }
 
+    public void getNursesByShift(String shift) {
+        boolean found = false;
+
+        for (Nurse nurse : nurses) {
+            if (nurse.getShift().equalsIgnoreCase(shift)) {
+                nurse.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No nurses found in this shift.");
+        }
+    }
+
 }
