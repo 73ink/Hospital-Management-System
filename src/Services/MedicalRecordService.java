@@ -12,4 +12,15 @@ public class MedicalRecordService {
         records.add(record);
         System.out.println("Medical record added successfully.");
     }
+
+    public void editRecord(String recordId, MedicalRecord updatedRecord) {
+        for (int i = 0; i < records.size(); i++) {
+            if (records.get(i).getRecordId().equals(recordId)) {
+                records.set(i, updatedRecord);
+                System.out.println("Medical record updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Medical record not found.");
+    }
 }
