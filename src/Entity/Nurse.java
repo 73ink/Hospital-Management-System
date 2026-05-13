@@ -11,6 +11,8 @@ public class Nurse extends Person{
     private String qualification;
     private List assignedPatients;
 
+
+
     public Nurse(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String nurseId, String departmentId, String shift, String qualification, List assignedPatients) {
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
         this.nurseId = nurseId;
@@ -18,5 +20,15 @@ public class Nurse extends Person{
         this.shift = shift;
         this.qualification = qualification;
         this.assignedPatients = assignedPatients;
+    }
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Nurse ID: " + nurseId);
+        System.out.println("Department ID: " + departmentId);
+        System.out.println("Shift: " + shift);
+        System.out.println("Qualification: " + qualification);
+        System.out.println("Assigned Patients: " + assignedPatients);
+        System.out.println("-----------------------------------");
     }
 }
