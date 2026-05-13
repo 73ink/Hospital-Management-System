@@ -21,7 +21,16 @@ public class DoctorService {
         }
         System.out.println("Doctor not found.");
     }
-
+    public void removeDoctor(String doctorId) {
+        for (Doctor doctor : doctors) {
+            if (doctor.getDoctorId().equals(doctorId)) {
+                doctors.remove(doctor);
+                System.out.println("Doctor removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Doctor not found.");
+    }
 
 
     public List<Doctor> getDoctors() {
