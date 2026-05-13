@@ -52,4 +52,15 @@ public class DepartmentService {
             department.displayInfo();
         }
     }
+
+    public void assignDoctorToDepartment(String doctorId, String departmentId) {
+        Department department = getDepartmentById(departmentId);
+
+        if (department != null) {
+            department.assignDoctor(doctorId);
+            System.out.println("Doctor assigned to department successfully.");
+        } else {
+            System.out.println("Department not found.");
+        }
+    }
 }
