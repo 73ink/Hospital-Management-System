@@ -34,4 +34,7 @@ public class Nurse extends Person{
     public void assignPatient(String patientId) {
         assignedPatients.add(patientId);
     }
+    public void removePatient(String patientId) {
+        assignedPatients.remove(patientId);
+    }
 }
