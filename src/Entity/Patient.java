@@ -26,4 +26,16 @@ public class Patient extends Person {
         this.medicalRecords = medicalRecords;
         this.appointments = appointments;
     }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Patient ID: " + patientId);
+        System.out.println("Blood Group: " + bloodGroup);
+        System.out.println("Allergies: " + allergies);
+        System.out.println("Emergency Contact: " + emergencyContact);
+        System.out.println("Registration Date: " + registrationDate);
+        System.out.println("Insurance ID: " + insuranceId);
+        System.out.println("-----------------");
+    }
 }
