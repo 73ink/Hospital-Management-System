@@ -5,4 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PatientService {
+    private static List<Patient> patients = new ArrayList<>();
+
 }
