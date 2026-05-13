@@ -83,4 +83,19 @@ public class AppointmentService {
         }
     }
 
+    public void getAppointmentsByDate(LocalDate date) {
+        boolean found = false;
+
+        for (Appointment appointment : appointments) {
+            if (appointment.getAppointmentDate().equals(date)) {
+                appointment.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No appointments found on this date.");
+        }
+    }
+
 }
