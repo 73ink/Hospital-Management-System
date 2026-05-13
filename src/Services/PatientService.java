@@ -11,4 +11,15 @@ public class PatientService {
         patients.add(patient);
         System.out.println("Patient added successfully.");
     }
+    public void editPatient(String patientId, Patient updatedPatient){
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i).getPatientId().equals(patientId)) {
+                patients.set(i, updatedPatient);
+                System.out.println("Patient updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Patient not found.");
+    }
+
 }
