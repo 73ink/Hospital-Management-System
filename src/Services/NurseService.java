@@ -25,5 +25,16 @@ public class NurseService {
         System.out.println("Nurse not found.");
     }
 
+    public void removeNurse(String nurseId) {
+        for (Nurse nurse : nurses) {
+            if (nurse.getNurseId().equals(nurseId)) {
+                nurses.remove(nurse);
+                System.out.println("Nurse removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Nurse not found.");
+    }
+
 
 }
