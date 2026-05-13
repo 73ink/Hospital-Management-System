@@ -65,6 +65,21 @@ public class DoctorService {
         }
     }
 
+    public void getAvailableDoctors() {
+        boolean found = false;
+
+        for (Doctor doctor : doctors) {
+            if (!doctor.getAvailableSlots().isEmpty()) {
+                doctor.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No available doctors found.");
+        }
+    }
+
 
     public List<Doctor> getDoctors() {
         return doctors;
