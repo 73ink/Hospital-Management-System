@@ -21,5 +21,15 @@ public class PatientService {
         }
         System.out.println("Patient not found.");
     }
+    public void removePatient(String patientId) {
+        for (Patient patient : patients) {
+            if (patient.getPatientId().equals(patientId)) {
+                patients.remove(patient);
+                System.out.println("Patient removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Patient not found.");
+    }
 
 }
