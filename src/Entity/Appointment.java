@@ -97,5 +97,17 @@ public class Appointment {
         System.out.println("Notes: " + notes);
         System.out.println("------------------");
     }
+    public void reschedule(LocalDate newDate, String newTime) {
+        this.appointmentDate = newDate;
+        this.appointmentTime = newTime;
+        this.status = "Rescheduled";
+    }
+
+    public void cancel() {
+        this.status = "Cancelled";
+    }
+    public void complete() {
+        this.status = "Completed";
+    }
 
 }
