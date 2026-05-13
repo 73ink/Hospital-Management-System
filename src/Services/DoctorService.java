@@ -39,6 +39,16 @@ public class DoctorService {
         }
         return null;
     }
+    public void displayAllDoctors() {
+        if (doctors.isEmpty()) {
+            System.out.println("No doctors available.");
+            return;
+        }
+
+        for (Doctor doctor : doctors) {
+            doctor.displayInfo();
+        }
+    }
 
 
     public List<Doctor> getDoctors() {
