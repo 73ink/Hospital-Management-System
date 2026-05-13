@@ -31,6 +31,14 @@ public class DoctorService {
         }
         System.out.println("Doctor not found.");
     }
+    public Doctor getDoctorById(String doctorId) {
+        for (Doctor doctor : doctors) {
+            if (doctor.getDoctorId().equals(doctorId)) {
+                return doctor;
+            }
+        }
+        return null;
+    }
 
 
     public List<Doctor> getDoctors() {
