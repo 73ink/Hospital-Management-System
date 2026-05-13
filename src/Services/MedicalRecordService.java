@@ -54,4 +54,19 @@ public class MedicalRecordService {
             record.displayInfo();
         }
     }
+
+    public void getRecordsByPatientId(String patientId) {
+        boolean found = false;
+
+        for (MedicalRecord record : records) {
+            if (record.getPatientId().equals(patientId)) {
+                record.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No records found for this patient.");
+        }
+    }
 }
