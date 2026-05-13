@@ -31,4 +31,7 @@ public class Nurse extends Person{
         System.out.println("Assigned Patients: " + assignedPatients);
         System.out.println("-----------------------------------");
     }
+    public void assignPatient(String patientId) {
+        assignedPatients.add(patientId);
+    }
 }
