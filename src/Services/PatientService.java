@@ -49,5 +49,23 @@ public class PatientService {
             patient.displayInfo();
         }
     }
+    public void searchPatientsByName(String name) {
+        boolean found = false;
+
+        for (Patient patient : patients) {
+            if (patient.getFirstName().equalsIgnoreCase(name) ||
+                    patient.getLastName().equalsIgnoreCase(name)) {
+
+                patient.displayInfo();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No patient found with this name.");
+        }
+    }
+
+
 
 }
