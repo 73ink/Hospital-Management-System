@@ -21,4 +21,15 @@ public class AppointmentService {
         }
         System.out.println("Appointment not found.");
     }
+
+    public void removeAppointment(String appointmentId) {
+        for (Appointment appointment : appointments) {
+            if (appointment.getAppointmentId().equals(appointmentId)) {
+                appointments.remove(appointment);
+                System.out.println("Appointment removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Appointment not found.");
+    }
 }
