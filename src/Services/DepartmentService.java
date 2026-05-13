@@ -21,4 +21,15 @@ public class DepartmentService {
         }
         System.out.println("Department not found.");
     }
+
+    public void removeDepartment(String departmentId) {
+        for (Department department : departments) {
+            if (department.getDepartmentId().equals(departmentId)) {
+                departments.remove(department);
+                System.out.println("Department removed successfully.");
+                return;
+            }
+        }
+        System.out.println("Department not found.");
+    }
 }
