@@ -98,4 +98,15 @@ public class AppointmentService {
         }
     }
 
+    public void rescheduleAppointment(String appointmentId, LocalDate newDate, String newTime) {
+        Appointment appointment = getAppointmentById(appointmentId);
+
+        if (appointment != null) {
+            appointment.reschedule(newDate, newTime);
+            System.out.println("Appointment rescheduled successfully.");
+        } else {
+            System.out.println("Appointment not found.");
+        }
+    }
+
 }
