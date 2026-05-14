@@ -37,4 +37,28 @@ public class Surgeon extends Doctor{
     public void updateSurgeryCount() {
         surgeriesPerformed++;
     }
+
+    public int getSurgeriesPerformed() {
+        return surgeriesPerformed;
+    }
+
+    public void setSurgeriesPerformed(int surgeriesPerformed) {
+        this.surgeriesPerformed = surgeriesPerformed;
+    }
+
+    public List<String> getSurgeryTypes() {
+        return surgeryTypes;
+    }
+
+    public void setSurgeryTypes(List<String> surgeryTypes) {
+        this.surgeryTypes = surgeryTypes;
+    }
+
+    public boolean isOperationTheatreAccess() {
+        return operationTheatreAccess;
+    }
+
+    public void setOperationTheatreAccess(boolean operationTheatreAccess) {
+        this.operationTheatreAccess = operationTheatreAccess;
+    }
 }
