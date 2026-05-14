@@ -16,5 +16,12 @@ public class Surgeon extends Doctor{
         this.surgeryTypes = new ArrayList<>();
     }
 
-
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Surgeries Performed: " + surgeriesPerformed);
+        System.out.println("Surgery Types: " + surgeryTypes);
+        System.out.println("Operation Theatre Access: " + operationTheatreAccess);
+        System.out.println("----------------");
+    }
 }
