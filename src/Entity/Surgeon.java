@@ -34,4 +34,7 @@ public class Surgeon extends Doctor{
             System.out.println("This surgeon does not have operation theatre access.");
         }
     }
+    public void updateSurgeryCount() {
+        surgeriesPerformed++;
+    }
 }
