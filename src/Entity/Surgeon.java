@@ -10,7 +10,7 @@ public class Surgeon extends Doctor{
     //Constructor chaining flow: Person -> Doctor -> Surgeon
     public Surgeon(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List availableSlots, List assignedPatients, int surgeriesPerformed, boolean operationTheatreAccess, List<String> surgeryTypes) {
         //  Doctor constructor will call Person constructor
-        super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address, doctorId, specialization, qualification, experienceYears, departmentId, consultationFee, availableSlots, assignedPatients);
+        super (id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address, doctorId, specialization, qualification, experienceYears, departmentId, consultationFee, availableSlots, assignedPatients);
         this.surgeriesPerformed = surgeriesPerformed;
         this.operationTheatreAccess = operationTheatreAccess;
         this.surgeryTypes = new ArrayList<>();
