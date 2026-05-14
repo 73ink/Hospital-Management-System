@@ -24,4 +24,14 @@ public class Surgeon extends Doctor{
         System.out.println("Operation Theatre Access: " + operationTheatreAccess);
         System.out.println("----------------");
     }
+
+    public void performSurgery(String surgeryType) {
+        if (operationTheatreAccess) {
+            surgeriesPerformed++;
+            surgeryTypes.add(surgeryType);
+            System.out.println("Surgery performed successfully.");
+        } else {
+            System.out.println("This surgeon does not have operation theatre access.");
+        }
+    }
 }
