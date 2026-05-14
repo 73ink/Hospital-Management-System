@@ -10,8 +10,17 @@ public class Consultant extends Doctor{
 
     public Consultant(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List availableSlots, List assignedPatients, List<String> consultationTypes, boolean onlineConsultationAvailable, int consultationDuration) {
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address, doctorId, specialization, qualification, experienceYears, departmentId, consultationFee, availableSlots, assignedPatients);
-        this.consultationTypes = consultationTypes;
+        this.consultationTypes = new ArrayList<>();
         this.onlineConsultationAvailable = onlineConsultationAvailable;
         this.consultationDuration = consultationDuration;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Consultation Types: " + consultationTypes);
+        System.out.println("Online Consultation Available: " + onlineConsultationAvailable);
+        System.out.println("Consultation Duration: " + consultationDuration + " minutes");
+        System.out.println("-----------------------------------");
     }
 }
