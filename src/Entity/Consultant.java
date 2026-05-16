@@ -28,4 +28,9 @@ public class Consultant extends Doctor{
         consultationTypes.add(consultationType);
         System.out.println("Consultation scheduled: " + consultationType);
     }
+
+    public void provideSecondOpinion() {
+        System.out.println("Consultant is providing a second opinion.");
+    }
+
 }
