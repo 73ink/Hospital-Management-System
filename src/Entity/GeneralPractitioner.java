@@ -39,5 +39,29 @@ public class GeneralPractitioner extends Doctor{
             System.out.println("This doctor is not certified for vaccination.");
         }
     }
+
+    public boolean isWalkinAvailable() {
+        return walkinAvailable;
+    }
+
+    public void setWalkinAvailable(boolean walkinAvailable) {
+        this.walkinAvailable = walkinAvailable;
+    }
+
+    public boolean isHomeVisitAvailable() {
+        return homeVisitAvailable;
+    }
+
+    public void setHomeVisitAvailable(boolean homeVisitAvailable) {
+        this.homeVisitAvailable = homeVisitAvailable;
+    }
+
+    public boolean isVaccinationCertified() {
+        return vaccinationCertified;
+    }
+
+    public void setVaccinationCertified(boolean vaccinationCertified) {
+        this.vaccinationCertified = vaccinationCertified;
+    }
 }
 
