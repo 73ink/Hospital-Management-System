@@ -23,4 +23,9 @@ public class Consultant extends Doctor{
         System.out.println("Consultation Duration: " + consultationDuration + " minutes");
         System.out.println("-----------------------------------");
     }
+
+    public void scheduleConsultation(String consultationType) {
+        consultationTypes.add(consultationType);
+        System.out.println("Consultation scheduled: " + consultationType);
+    }
 }
