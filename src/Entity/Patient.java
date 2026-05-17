@@ -19,12 +19,14 @@ public class Patient extends Person {
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
         this.patientId = patientId;
         this.bloodGroup = bloodGroup;
-        this.allergies = allergies;
         this.emergencyContact = emergencyContact;
         this.registrationDate = registrationDate;
         this.insuranceId = insuranceId;
-        this.medicalRecords = medicalRecords;
-        this.appointments = appointments;
+
+        // These lists are created here, so we do not need to send them from PatientService
+        this.allergies = new ArrayList<>();
+        this.medicalRecords = new ArrayList<>();
+        this.appointments = new ArrayList<>();
     }
 
     @Override
