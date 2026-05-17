@@ -1,28 +1,37 @@
 package Entity;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Doctor extends Person {
+
     private String doctorId;
     private String specialization;
     private String qualification;
     private int experienceYears;
     private String departmentId;
     private double consultationFee;
-    private List availableSlots;
-    private List assignedPatients;
+    private List<String> availableSlots;
+    private List<String> assignedPatients;
 
-    public Doctor(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String doctorId, String specialization, String qualification, int experienceYears, String departmentId, double consultationFee, List availableSlots, List assignedPatients) {
+    public Doctor(String id, String firstName, String lastName, LocalDate dateOfBirth,
+                  String gender, String phoneNumber, String email, String address,
+                  String doctorId, String specialization, String qualification,
+                  int experienceYears, String departmentId, double consultationFee) {
+
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
+
         this.doctorId = doctorId;
         this.specialization = specialization;
         this.qualification = qualification;
         this.experienceYears = experienceYears;
         this.departmentId = departmentId;
         this.consultationFee = consultationFee;
-        this.availableSlots = availableSlots;
-        this.assignedPatients = assignedPatients;
+
+        // We create empty lists here instead of sending them from DoctorService
+        this.availableSlots = new ArrayList<>();
+        this.assignedPatients = new ArrayList<>();
     }
 
     @Override
@@ -38,6 +47,7 @@ public class Doctor extends Person {
         System.out.println("Assigned Patients: " + assignedPatients);
         System.out.println("-------------------");
     }
+
     public void assignPatient(String patientId) {
         assignedPatients.add(patientId);
     }
@@ -50,7 +60,7 @@ public class Doctor extends Person {
         availableSlots.add(slot);
     }
 
-    // Added Getter and Setter
+    // Getters and Setters
 
     public String getDoctorId() {
         return doctorId;
@@ -100,23 +110,23 @@ public class Doctor extends Person {
         this.consultationFee = consultationFee;
     }
 
-    public List getAvailableSlots() {
+    public List<String> getAvailableSlots() {
         return availableSlots;
     }
 
-    public void setAvailableSlots(List availableSlots) {
+    public void setAvailableSlots(List<String> availableSlots) {
         this.availableSlots = availableSlots;
     }
 
-    public List getAssignedPatients() {
+    public List<String> getAssignedPatients() {
         return assignedPatients;
     }
 
-    public void setAssignedPatients(List assignedPatients) {
+    public void setAssignedPatients(List<String> assignedPatients) {
         this.assignedPatients = assignedPatients;
     }
 
-    // overloading method
+    // Task 2.5: Method overloading in Doctor class
 
     public void updateFee(double fee) {
         this.consultationFee = fee;
