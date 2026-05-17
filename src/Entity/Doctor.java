@@ -115,4 +115,23 @@ public class Doctor extends Person {
     public void setAssignedPatients(List assignedPatients) {
         this.assignedPatients = assignedPatients;
     }
+
+    // overloading method
+
+    public void updateFee(double fee) {
+        this.consultationFee = fee;
+    }
+
+    public void updateFee(double fee, String reason) {
+        this.consultationFee = fee;
+        System.out.println("Fee updated. Reason: " + reason);
+    }
+
+    public void addAvailability(String slot) {
+        availableSlots.add(slot);
+    }
+
+    public void addAvailability(List<String> slots) {
+        availableSlots.addAll(slots);
+    }
 }
