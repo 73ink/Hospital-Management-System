@@ -71,8 +71,8 @@ public class PatientService {
         return patients;
     }
 
-// overloading method
-    // Task 2.3: Overloaded addPatient methods
+// overloading methods:
+    // Overloaded addPatient methods
 
     public void addPatient(String firstName, String lastName, String phone) {
         Patient patient = new Patient(
@@ -116,7 +116,7 @@ public class PatientService {
         System.out.println("Patient added with blood group and email.");
     }
 
-    // Task 2.3: Overloaded searchPatients methods
+    //  Overloaded searchPatients methods
 
     public void searchPatients(String keyword) {
         boolean found = false;
@@ -154,7 +154,7 @@ public class PatientService {
         }
     }
 
-    // Task 2.3: Overloaded displayPatients methods
+    // : Overloaded displayPatients methods
 
     public void displayPatients() {
         displayAllPatients();
