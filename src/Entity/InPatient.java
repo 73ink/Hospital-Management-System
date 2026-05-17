@@ -32,6 +32,20 @@ public class InPatient extends Patient{
         System.out.println("Admitting Doctor ID: " + admittingDoctorId);
         System.out.println("Daily Charges: " + dailyCharges);
         System.out.println("Total Charges: " + calculateTotalCharges());
+        System.out.println("-----------------------------------");
+
+    }
+
+    public long calculateStayDuration() {
+        if (admissionDate == null || dischargeDate == null) {
+            return 0;
+        }
+
+        return ChronoUnit.DAYS.between(admissionDate, dischargeDate);
+    }
+
+    public double calculateTotalCharges() {
+        return calculateStayDuration() * dailyCharges;
     }
 
 
