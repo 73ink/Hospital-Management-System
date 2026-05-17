@@ -15,15 +15,19 @@ public class Patient extends Person {
     private List<MedicalRecord> medicalRecords;
     private List<Appointment> appointments;
 
-    public Patient(String id, String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber, String email, String address, String patientId, String bloodGroup, List<String> allergies, String emergencyContact, LocalDate registrationDate, String insuranceId, List<MedicalRecord> medicalRecords, List<Appointment> appointments) {
+    public Patient(String id, String firstName, String lastName, LocalDate dateOfBirth,
+                   String gender, String phoneNumber, String email, String address,
+                   String patientId, String bloodGroup, String emergencyContact,
+                   LocalDate registrationDate, String insuranceId) {
+
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
+
         this.patientId = patientId;
         this.bloodGroup = bloodGroup;
         this.emergencyContact = emergencyContact;
         this.registrationDate = registrationDate;
         this.insuranceId = insuranceId;
 
-        // These lists are created here, so we do not need to send them from PatientService
         this.allergies = new ArrayList<>();
         this.medicalRecords = new ArrayList<>();
         this.appointments = new ArrayList<>();
@@ -117,6 +121,8 @@ public class Patient extends Person {
     public void setAppointments(List<Appointment> appointments) {
         this.appointments = appointments;
     }
+
+
 // overloading method
     // Task 2.5: Method overloading in Patient class
 
