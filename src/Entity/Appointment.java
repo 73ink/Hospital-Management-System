@@ -1,6 +1,7 @@
 package Entity;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Appointment {
     private String appointmentId;
@@ -23,6 +24,7 @@ public class Appointment {
         this.notes = notes;
     }
 
+    // Added Getter and Setter
     public String getAppointmentId() {
         return appointmentId;
     }
@@ -110,4 +112,19 @@ public class Appointment {
         this.status = "Completed";
     }
 
+
+    // overloading method
+
+
+    public void addNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public void addNotes(String notes, String addedBy) {
+        this.notes = notes + " | Added by: " + addedBy;
+    }
+
+    public void addNotes(String notes, String addedBy, LocalDateTime timestamp) {
+        this.notes = notes + " | Added by: " + addedBy + " | Time: " + timestamp;
+    }
 }
