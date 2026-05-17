@@ -115,4 +115,21 @@ public class Patient extends Person {
     public void setAppointments(List<Appointment> appointments) {
         this.appointments = appointments;
     }
+// overloading method
+    // Task 2.5: Method overloading in Patient class
+
+    public void updateContact(String phone) {
+        setPhoneNumber(phone);
+    }
+
+    public void updateContact(String phone, String email) {
+        setPhoneNumber(phone);
+        setEmail(email);
+    }
+
+    public void updateContact(String phone, String email, String address) {
+        setPhoneNumber(phone);
+        setEmail(email);
+        setAddress(address);
+    }
 }
