@@ -224,5 +224,32 @@ public class DoctorService implements Manageable, Searchable{
             System.out.println("No doctors found with the selected filter.");
         }
     }
+
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof Doctor) {
+            addDoctor((Doctor) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removeDoctor(id);
+    }
+
+    @Override
+    public List<Doctor> getAll() {
+        return doctors;
+    }
+
+    @Override
+    public void search(String keyword) {
+        getDoctorsBySpecialization(keyword);
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getDoctorById(id);
+    }
 }
 
