@@ -198,4 +198,31 @@ public class PatientService implements Manageable, Searchable{
             count++;
         }
     }
+
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof Patient) {
+            addPatient((Patient) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removePatient(id);
+    }
+
+    @Override
+    public List<Patient> getAll() {
+        return patients;
+    }
+
+    @Override
+    public void search(String keyword) {
+        searchPatients(keyword);
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getPatientById(id);
+    }
 }
