@@ -100,4 +100,25 @@ public class InPatient extends Patient implements Billable{
     public void setDailyCharges(double dailyCharges) {
         this.dailyCharges = dailyCharges;
     }
+    @Override
+    public double calculateCharges() {
+        return calculateTotalCharges();
+    }
+
+    @Override
+    public void generateBill() {
+        System.out.println("Bill for Patient ID: " + getPatientId());
+        System.out.println("Stay Duration: " + calculateStayDuration() + " days");
+        System.out.println("Daily Charges: " + dailyCharges);
+        System.out.println("Total Charges: " + calculateCharges());
+    }
+
+    @Override
+    public void processPayment(double amount) {
+        if (amount >= calculateCharges()) {
+            System.out.println("Payment completed successfully.");
+        } else {
+            System.out.println("Payment is not enough. Remaining: " + (calculateCharges() - amount));
+        }
+    }
 }
