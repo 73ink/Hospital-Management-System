@@ -1,5 +1,8 @@
 package Entity;
 
+import Interfaces.Displayable;
+import Interfaces.Editable;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
