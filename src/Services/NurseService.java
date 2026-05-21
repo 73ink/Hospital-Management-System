@@ -92,4 +92,30 @@ public class NurseService implements Manageable, Searchable {
         return nurses;
     }
 
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof Nurse) {
+            addNurse((Nurse) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removeNurse(id);
+    }
+
+    @Override
+    public List<Nurse> getAll() {
+        return nurses;
+    }
+
+    @Override
+    public void search(String keyword) {
+        getNursesByDepartment(keyword);
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getNurseById(id);
+    }
 }
