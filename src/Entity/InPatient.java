@@ -1,9 +1,11 @@
 package Entity;
+import Interfaces.Billable;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-public class InPatient extends Patient{
+public class InPatient extends Patient implements Billable{
     private LocalDate admissionDate;
     private LocalDate dischargeDate;
     private String roomNumber;
