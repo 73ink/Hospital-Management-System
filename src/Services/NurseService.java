@@ -1,11 +1,13 @@
 package Services;
+import Interfaces.Manageable;
+import Interfaces.Searchable;
 
 import Entity.Doctor;
 import Entity.Nurse;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NurseService {
+public class NurseService implements Manageable, Searchable {
 
     private List<Nurse> nurses = new ArrayList<>();
 
