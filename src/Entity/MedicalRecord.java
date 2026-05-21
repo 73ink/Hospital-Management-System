@@ -1,9 +1,11 @@
 package Entity;
 
+import Interfaces.Displayable;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class MedicalRecord {
+public class MedicalRecord implements Displayable{
     private String recordId;
     private String patientId;
     private String doctorId;
