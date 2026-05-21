@@ -57,4 +57,37 @@ public class HelperUtils {
         return prefix + "-" + UUID.randomUUID().toString().substring(0, 5).toUpperCase() + "-" + suffix;
     }
 
+    // Date Validation Methods
+    public static boolean isValidDate(LocalDate date) {
+        return date != null;
+    }
+
+    public static boolean isValidDate(String dateStr) {
+        try {
+            LocalDate.parse(dateStr);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static boolean isValidDate(LocalDate date, LocalDate minDate, LocalDate maxDate) {
+        return date != null &&
+                (date.isEqual(minDate) || date.isAfter(minDate)) &&
+                (date.isEqual(maxDate) || date.isBefore(maxDate));
+    }
+
+    public static boolean isFutureDate(LocalDate date) {
+        return date != null && date.isAfter(LocalDate.now());
+    }
+
+    public static boolean isPastDate(LocalDate date) {
+        return date != null && date.isBefore(LocalDate.now());
+    }
+
+    public static boolean isToday(LocalDate date) {
+        return date != null && date.isEqual(LocalDate.now());
+    }
+
+
 }
