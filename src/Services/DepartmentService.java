@@ -82,4 +82,35 @@ public class DepartmentService implements Manageable, Searchable  {
     public List<Department> getDepartments() {
         return departments;
     }
+
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof Department) {
+            addDepartment((Department) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removeDepartment(id);
+    }
+
+    @Override
+    public List<Department> getAll() {
+        return departments;
+    }
+
+    @Override
+    public void search(String keyword) {
+        for (Department department : departments) {
+            if (department.getDepartmentName().equalsIgnoreCase(keyword)) {
+                department.displayInfo();
+            }
+        }
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getDepartmentById(id);
+    }
 }
