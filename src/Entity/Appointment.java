@@ -128,4 +128,9 @@ public class Appointment implements Displayable{
     public void addNotes(String notes, String addedBy, LocalDateTime timestamp) {
         this.notes = notes + " | Added by: " + addedBy + " | Time: " + timestamp;
     }
+
+    @Override
+    public void displaySummary() {
+        System.out.println(appointmentId + " - " + patientId + " with " + doctorId + " on " + appointmentDate);
+    }
 }
