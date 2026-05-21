@@ -1,4 +1,6 @@
 package Services;
+import Interfaces.Manageable;
+import Interfaces.Searchable;
 
 import Entity.Doctor;
 import Entity.Patient;
@@ -8,7 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DoctorService {
+public class DoctorService implements Manageable, Searchable{
     private List<Doctor> doctors = new ArrayList<>();
 
     public void addDoctor(Doctor doctor){
