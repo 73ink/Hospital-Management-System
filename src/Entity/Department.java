@@ -101,4 +101,9 @@ public class Department implements Displayable{
     public void updateBedAvailability(int availableBeds) {
         this.availableBeds = availableBeds;
     }
+
+    @Override
+    public void displaySummary() {
+        System.out.println(departmentId + " - " + departmentName + " | Available Beds: " + availableBeds);
+    }
 }
