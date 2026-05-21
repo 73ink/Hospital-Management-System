@@ -39,5 +39,22 @@ public class HelperUtils {
         return isNotNull(str) && str.matches(regex);
     }
 
+    // ID Generation Methods
+    public static String generateId() {
+        return UUID.randomUUID().toString();
+    }
+
+    public static String generateId(String prefix) {
+        return prefix + "-" + UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+    }
+
+    public static String generateId(String prefix, int length) {
+        String random = UUID.randomUUID().toString().replace("-", "").substring(0, length).toUpperCase();
+        return prefix + "-" + random;
+    }
+
+    public static String generateId(String prefix, String suffix) {
+        return prefix + "-" + UUID.randomUUID().toString().substring(0, 5).toUpperCase() + "-" + suffix;
+    }
 
 }
