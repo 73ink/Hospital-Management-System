@@ -122,4 +122,70 @@ public class HelperUtils {
         return num == 0;
     }
 
+    // Input Validation Methods
+    public static boolean isValidAge(int age) {
+        return age > 0 && age <= 120;
+    }
+
+    public static boolean isValidAge(LocalDate dateOfBirth) {
+        if (dateOfBirth == null) {
+            return false;
+        }
+
+        int age = LocalDate.now().getYear() - dateOfBirth.getYear();
+        return isValidAge(age);
+    }
+
+    public static boolean isValidPhone(String phone) {
+        return isNotNull(phone) && phone.length() >= 8;
+    }
+
+    public static boolean isValidEmail(String email) {
+        return isNotNull(email) && email.contains("@");
+    }
+
+    public static boolean isValidBloodGroup(String bloodGroup) {
+        return isNotNull(bloodGroup);
+    }
+
+    public static boolean isValidGender(String gender) {
+        return isNotNull(gender);
+    }
+
+    public static boolean isValidShift(String shift) {
+        return shift.equalsIgnoreCase("Morning") ||
+                shift.equalsIgnoreCase("Evening") ||
+                shift.equalsIgnoreCase("Night");
+    }
+
+    public static boolean isValidAppointmentStatus(String status) {
+        return status.equalsIgnoreCase("Scheduled") ||
+                status.equalsIgnoreCase("Completed") ||
+                status.equalsIgnoreCase("Cancelled") ||
+                status.equalsIgnoreCase("Rescheduled");
+    }
+
+    public static boolean isValidTriageLevel(int level) {
+        return level >= 1 && level <= 5;
+    }
+
+    public static boolean isValidFee(double fee) {
+        return fee >= 0;
+    }
+
+    public static boolean isValidBedNumber(String bedNumber) {
+        return isNotNull(bedNumber);
+    }
+
+    public static boolean isValidRoomNumber(String roomNumber) {
+        return isNotNull(roomNumber);
+    }
+
+    public static boolean isValidDepartmentName(String departmentName) {
+        return isValidString(departmentName, 2);
+    }
+
+    public static boolean isValidChoice(int choice, int min, int max) {
+        return choice >= min && choice <= max;
+    }
 }
