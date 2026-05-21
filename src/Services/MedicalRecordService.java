@@ -96,5 +96,31 @@ public class MedicalRecordService implements Manageable, Searchable{
         return records;
     }
 
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof MedicalRecord) {
+            addRecord((MedicalRecord) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removeRecord(id);
+    }
+
+    @Override
+    public List<MedicalRecord> getAll() {
+        return records;
+    }
+
+    @Override
+    public void search(String keyword) {
+        getRecordsByPatientId(keyword);
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getRecordById(id);
+    }
 
 }
