@@ -1,9 +1,13 @@
 package Services;
+import Interfaces.Manageable;
+import Interfaces.Searchable;
+import Interfaces.Appointable;
+
 import Entity.Appointment;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-public class AppointmentService {
+public class AppointmentService implements Manageable, Searchable, Appointment {
     private List<Appointment> appointments = new ArrayList<>();
 
     public void addAppointment(Appointment appointment) {
