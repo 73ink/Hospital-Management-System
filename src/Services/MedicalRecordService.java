@@ -1,10 +1,12 @@
 package Services;
+import Interfaces.Manageable;
+import Interfaces.Searchable;
 
 import Entity.MedicalRecord;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MedicalRecordService {
+public class MedicalRecordService implements Manageable, Searchable{
 
     private List<MedicalRecord> records = new ArrayList<>();
 
