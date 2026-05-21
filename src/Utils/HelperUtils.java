@@ -89,5 +89,37 @@ public class HelperUtils {
         return date != null && date.isEqual(LocalDate.now());
     }
 
+    // Numeric Validation Methods
+    public static boolean isValidNumber(int num, int min, int max) {
+        return num >= min && num <= max;
+    }
+
+    public static boolean isValidNumber(double num, double min, double max) {
+        return num >= min && num <= max;
+    }
+
+    public static boolean isPositive(int num) {
+        return num > 0;
+    }
+
+    public static boolean isPositive(double num) {
+        return num > 0;
+    }
+
+    public static boolean isNegative(int num) {
+        return num < 0;
+    }
+
+    public static boolean isNegative(double num) {
+        return num < 0;
+    }
+
+    public static boolean isZero(int num) {
+        return num == 0;
+    }
+
+    public static boolean isZero(double num) {
+        return num == 0;
+    }
 
 }
