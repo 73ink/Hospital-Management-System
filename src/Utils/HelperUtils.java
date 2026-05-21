@@ -22,5 +22,22 @@ public class HelperUtils {
         return str != null && !str.trim().isEmpty();
     }
 
+    // String Validation Methods
+    public static boolean isValidString(String str) {
+        return isNotNull(str);
+    }
+
+    public static boolean isValidString(String str, int minLength) {
+        return isNotNull(str) && str.length() >= minLength;
+    }
+
+    public static boolean isValidString(String str, int minLength, int maxLength) {
+        return isNotNull(str) && str.length() >= minLength && str.length() <= maxLength;
+    }
+
+    public static boolean isValidString(String str, String regex) {
+        return isNotNull(str) && str.matches(regex);
+    }
+
 
 }
