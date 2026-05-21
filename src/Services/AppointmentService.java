@@ -217,4 +217,36 @@ public class AppointmentService implements Manageable, Searchable, Appointment {
         }
     }
 
+    @Override
+    public void add(Object entity) {
+        if (entity instanceof Appointment) {
+            addAppointment((Appointment) entity);
+        }
+    }
+
+    @Override
+    public void remove(String id) {
+        removeAppointment(id);
+    }
+
+    @Override
+    public List<Appointment> getAll() {
+        return appointments;
+    }
+
+    @Override
+    public void search(String keyword) {
+        getAppointmentsByPatient(keyword);
+    }
+
+    @Override
+    public Object searchById(String id) {
+        return getAppointmentById(id);
+    }
+
+    @Override
+    public void scheduleAppointment(Appointment appointment) {
+        addAppointment(appointment);
+    }
+
 }
