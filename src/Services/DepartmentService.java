@@ -1,8 +1,12 @@
 package Services;
+
+import Interfaces.Manageable;
+import Interfaces.Searchable;
+
 import Entity.Department;
 import java.util.ArrayList;
 import java.util.List;
-public class DepartmentService {
+public class DepartmentService implements Manageable, Searchable  {
 
     private List<Department> departments = new ArrayList<>();
 
