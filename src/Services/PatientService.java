@@ -1,10 +1,14 @@
 package Services;
+
+import Interfaces.Manageable;
+import Interfaces.Searchable;
+
 import java.time.LocalDate;
 import Entity.Patient;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientService {
+public class PatientService implements Manageable, Searchable{
     private static List<Patient> patients = new ArrayList<>();
 
     public void addPatient(Patient patient) {
