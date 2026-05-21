@@ -6,7 +6,7 @@ import Interfaces.Editable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Displayable, Editable {
 
     private String id;
     private String firstName;
@@ -125,6 +125,31 @@ public void displayInfo(){
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
+
+
+    @Override
+    public void displaySummary() {
+        System.out.println(getId() + " - " + getFirstName() + " " + getLastName());
+    }
+
+    @Override
+    public void edit(Object updatedData) {
+        if (updatedData instanceof Person) {
+            Person updatedPerson = (Person) updatedData;
+            setFirstName(updatedPerson.getFirstName());
+            setLastName(updatedPerson.getLastName());
+            setPhoneNumber(updatedPerson.getPhoneNumber());
+            setEmail(updatedPerson.getEmail());
+            setAddress(updatedPerson.getAddress());
+        }
+    }
+
+    @Override
+    public boolean validate() {
+        return getFirstName() != null && !getFirstName().isEmpty()
+                && getPhoneNumber() != null && !getPhoneNumber().isEmpty();
+    }
+
 }
 
 
