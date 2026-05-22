@@ -15,7 +15,7 @@ public class OutPatient extends Patient {
         this.preferredDoctorId = preferredDoctorId;
         this.lastVisitDate = lastVisitDate;
     }
-
+// override method of displayInfo():void
     @Override
     public void displayInfo() {
         super.displayInfo();
