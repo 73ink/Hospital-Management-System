@@ -17,22 +17,19 @@ public class Doctor extends Person {
 
     public Doctor(String id, String firstName, String lastName, LocalDate dateOfBirth,
                   String gender, String phoneNumber, String email, String address,
-                  String doctorId, String specialization, String qualification,
-                  int experienceYears, String departmentId, double consultationFee) {
-
+                  String doctorId, String specialization, String qualification, int experienceYears,
+                  String departmentId, double consultationFee, List<String> availableSlots, List<String> assignedPatients) {
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
-
         this.doctorId = doctorId;
         this.specialization = specialization;
         this.qualification = qualification;
         this.experienceYears = experienceYears;
         this.departmentId = departmentId;
         this.consultationFee = consultationFee;
-
         // We create empty lists here instead of sending them from DoctorService
-        this.availableSlots = new ArrayList<>();
-        this.assignedPatients = new ArrayList<>();
-    }
+      this.availableSlots = new ArrayList<>();
+      this.assignedPatients = new ArrayList<>();
+   }
 
     @Override
     public void displayInfo() {
