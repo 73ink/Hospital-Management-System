@@ -3,7 +3,6 @@ package Entity;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Patient extends Person {
     private String patientId;
@@ -17,8 +16,8 @@ public class Patient extends Person {
 
     public Patient(String id, String firstName, String lastName, LocalDate dateOfBirth,
                    String gender, String phoneNumber, String email, String address,
-                   String patientId, String bloodGroup, String emergencyContact,
-                   LocalDate registrationDate, String insuranceId) {
+                   String patientId, String bloodGroup, List<String> allergies, String emergencyContact,
+                   LocalDate registrationDate, String insuranceId, List<MedicalRecord> medicalRecords, List<Appointment> appointments) {
 
         super(id, firstName, lastName, dateOfBirth, gender, phoneNumber, email, address);
 
@@ -54,7 +53,7 @@ public class Patient extends Person {
     public void updateInsurance(String newInsuranceId){
         this.insuranceId = newInsuranceId;
     }
-
+    public void addAllergy(String allergy) {  allergies.add(allergy);}
 
     // Added Getter and Setter
 
