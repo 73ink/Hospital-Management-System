@@ -1,6 +1,6 @@
 package Interfaces;
 import java.util.List;
-public class Manageable {
+public interface Manageable {
     void add(Object entity);
     void remove(String id);
     List<?> getAll();
