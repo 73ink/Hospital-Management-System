@@ -1,6 +1,6 @@
 package Interfaces;
 
-public class Editable {
+public interface Editable {
     void edit(Object updatedData);
     boolean validate();
 }
