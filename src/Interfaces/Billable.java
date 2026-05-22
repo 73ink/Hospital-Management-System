@@ -1,6 +1,6 @@
 package Interfaces;
 
-public class Billable {
+public interface Billable {
     double calculateCharges();
     void generateBill();
     void processPayment(double amount);
