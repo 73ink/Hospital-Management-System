@@ -90,9 +90,12 @@ public class PatientService implements Manageable, Searchable{
                 "Not provided",
                 "PAT-" + (patients.size() + 1),
                 "Not specified",
+                new ArrayList<>(),
                 "Not provided",
                 LocalDate.now(),
-                "Not provided"
+                "Not provided",
+                new ArrayList<>(),
+                new ArrayList<>()
         );
 
         patients.add(patient);
@@ -111,9 +114,12 @@ public class PatientService implements Manageable, Searchable{
                 "Not provided",
                 "PAT-" + (patients.size() + 1),
                 bloodGroup,
+                new ArrayList<>(),
                 "Not provided",
                 LocalDate.now(),
-                "Not provided"
+                "Not provided",
+                new ArrayList<>(),
+                new ArrayList<>()
         );
 
         patients.add(patient);
