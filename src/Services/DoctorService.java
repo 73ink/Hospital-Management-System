@@ -119,7 +119,9 @@ public class DoctorService implements Manageable, Searchable{
                 "Not provided",
                 0,
                 "Not assigned",
-                0.0
+                0.0,
+                new ArrayList<>(),
+                new ArrayList<>()
         );
 
         doctors.add(doctor);
@@ -150,7 +152,9 @@ public class DoctorService implements Manageable, Searchable{
                 "Not provided",
                 0,
                 "Not assigned",
-                consultationFee
+               consultationFee,
+                new ArrayList<>(),
+                new ArrayList<>()
         );
 
         doctors.add(doctor);
