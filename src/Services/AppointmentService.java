@@ -7,7 +7,7 @@ import Entity.Appointment;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-public class AppointmentService implements Manageable, Searchable, Appointment {
+public class AppointmentService implements Manageable, Searchable, Appointable{
     private List<Appointment> appointments = new ArrayList<>();
 
     public void addAppointment(Appointment appointment) {
